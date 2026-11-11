@@ -1,0 +1,229 @@
+.ssd-score {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  align-self: center;
+  min-width: 28px;
+  height: 20px;
+  margin-inline: 2px 8px;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.ssd-score--low {
+  color: #dc2626;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.ssd-score--mid {
+  color: #b45309;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.ssd-score--high {
+  color: #047857;
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+}
+
+.ssd-score--loading,
+.ssd-score--empty {
+  color: #94a3b8;
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  font-weight: 600;
+}
+
+.ssd-tip {
+  position: fixed;
+  z-index: 2147483646;
+  box-sizing: border-box;
+  width: 300px;
+  padding: 14px 14px 12px;
+  border: 1px solid #e7e9ee;
+  border-radius: 12px;
+  background: #fff;
+  color: #111827;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.14);
+  font-family: Inter, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.3;
+  pointer-events: none;
+  text-align: left;
+}
+
+.ssd-tip[hidden] {
+  display: none !important;
+}
+
+.ssd-tip * {
+  box-sizing: border-box;
+}
+
+.ssd-tip-title {
+  margin: 0 0 10px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.ssd-tip-layout {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ssd-ring {
+  --ssd-color: #94a3b8;
+  --ssd-value: 0;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: conic-gradient(var(--ssd-color) calc(var(--ssd-value) * 1%), #e8ebf0 0);
+}
+
+.ssd-ring-hole {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ssd-color);
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.ssd-metrics {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ssd-metric-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  color: #374151;
+  font-size: 12px;
+}
+
+.ssd-metric-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ssd-metric-value {
+  flex: 0 0 auto;
+  color: #111827;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.ssd-bar {
+  height: 4px;
+  margin-top: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #eef0f3;
+}
+
+.ssd-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.ssd-bar--low > span {
+  background: #ef4444;
+}
+
+.ssd-bar--mid > span {
+  background: #f59e0b;
+}
+
+.ssd-bar--high > span {
+  background: #10b981;
+}
+
+.ssd-tip-empty {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+html[data-ssd-theme="dark"] .ssd-score--low {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.16);
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
+html[data-ssd-theme="dark"] .ssd-score--mid {
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.16);
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
+html[data-ssd-theme="dark"] .ssd-score--high {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.16);
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+html[data-ssd-theme="dark"] .ssd-score--loading,
+html[data-ssd-theme="dark"] .ssd-score--empty {
+  color: #94a3b8;
+  background: rgba(148, 163, 184, 0.12);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+html[data-ssd-theme="dark"] .ssd-tip {
+  background: #1c1f26;
+  color: #f9fafb;
+  border-color: #343844;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+html[data-ssd-theme="dark"] .ssd-tip-title,
+html[data-ssd-theme="dark"] .ssd-tip-empty {
+  color: #9ca3af;
+}
+
+html[data-ssd-theme="dark"] .ssd-ring-hole {
+  background: #1c1f26;
+}
+
+html[data-ssd-theme="dark"] .ssd-metric-row {
+  color: #d1d5db;
+}
+
+html[data-ssd-theme="dark"] .ssd-metric-value {
+  color: #f9fafb;
+}
+
+html[data-ssd-theme="dark"] .ssd-bar {
+  background: #2e3340;
+}

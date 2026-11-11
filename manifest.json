@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Spaceship Domain Score",
+  "description": "Show domain scores beside prices on Spaceship search. Hover a score for brand fit, market demand, and memorability.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Spaceship Domain Score"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "https://www.spaceship.com/*",
+    "https://spaceship.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.spaceship.com/*",
+        "https://spaceship.com/*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}
