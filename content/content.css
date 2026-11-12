@@ -49,6 +49,10 @@
   font-weight: 600;
 }
 
+.pricing-table-row .ssd-score {
+  margin-inline: 0;
+}
+
 .ssd-tip {
   position: fixed;
   z-index: 2147483646;

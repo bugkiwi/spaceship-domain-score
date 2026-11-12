@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Spaceship Domain Score",
   "description": "Show domain scores beside prices on Spaceship search. Hover a score for brand fit, market demand, and memorability.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "action": {
     "default_title": "Spaceship Domain Score"
   },

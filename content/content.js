@@ -426,6 +426,12 @@
       const parent = item.querySelector(":scope > .domain-list-item-aside") || item.querySelector(".domain-list-item-pricing");
       if (domain && parent) found.push({ domain, parent });
     });
+    document.querySelectorAll("[data-zid='instantSearchPricingTableRow']").forEach((item) => {
+      const domain = readDomain(item);
+      const domainMain = item.querySelector(".domain-name-main");
+      const parent = domainMain?.parentElement || item.querySelector(".pricing-table-row-name");
+      if (domain && parent) found.push({ domain, parent, after: domainMain });
+    });
     const main = document.querySelector("[data-zid='instantSearchMainResult']");
     if (main) {
       const domain = readDomain(main);

@@ -7,7 +7,7 @@ Spaceship 域名搜索页的 Chrome 插件。结果里的域名加载后会批�
 - 高于 70：绿色
 - 悬停分数可看品牌适配度、市场需求、易记性
 
-支持 `https://www.spaceship.com/domain-search`，以及 `/zh/domain-search`、`/de/domain-search` 这类语言路径，包含生成器等子页面。
+支持 `https://www.spaceship.com/domain-search`，以及 `/zh/domain-search`、`/de/domain-search` 这类语言路径，包含定价、生成器等子页面。
 
 ## 安装
 
